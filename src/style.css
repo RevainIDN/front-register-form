@@ -8,3 +8,256 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #121826;
 }
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: -45%;
+  left: -45%;
+  width: 100%;
+  height: 100%;
+  background: 50% / 40% no-repeat url(/blur-radial.svg);
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  width: 100%;
+  height: 100%;
+  background: 50% / 40% no-repeat url(/blur-radial.svg);
+  overflow: hidden;
+  z-index: -1;
+}
+
+#app {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-form {
+  width: 40%;
+  background-color: #212936;
+  border: 1px #4D5562 solid;
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 10%;
+}
+
+.pagination-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40%;
+}
+
+.pagination-steps {
+  position: absolute;
+  font-size: 14px;
+  color: #394150;
+  top: 18px;
+  left: 25%;
+}
+
+.pagination-list {
+  display: flex;
+  gap: 15px;
+  margin-top: 16px;
+}
+
+.pagination-btn {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  background-color: #394150;
+  border-radius: 50%;
+}
+
+.pagination-btn--after-active {
+  background-color: #845EEE;
+}
+
+.pagination-btn--active {
+  background-color: #845EEE;
+  outline: 5px rgba(101, 44, 209, 0.5) solid;
+}
+
+.continue-cont {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.continue-btn {
+  width: 50%;
+  color: #E5E7EB;
+  background-color: #845EEE;
+  padding: 10px 50px;
+  border-radius: 32px;
+  margin-top: 50px;
+}
+
+
+/* ---------------------------------------------- */
+
+
+.first-step {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #A1A1A9;
+}
+
+.input {
+  color: #E5E7EB;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 2px #4D5562 solid;
+  padding: 10px 15px;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px #727d8f solid;
+}
+
+.input--empty {
+  display: none;
+  position: absolute;
+  color: crimson;
+  top: 0;
+  right: 0;
+}
+
+.input::placeholder {
+  color: #4D5562;
+}
+
+
+/* ---------------------------------------------- */
+
+
+.second-step {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topic-btn {
+  text-align: start;
+  color: #A1A1A9;
+  background-color: #394150;
+  border-radius: 12px;
+  border: 1px #4D5562 solid;
+  padding: 15px 15px;
+}
+
+.topic-btn--active {
+  color: #E5E7EB;
+  background-color: #652CD1;
+  border: 1px #845EEE solid;
+}
+
+
+/* ---------------------------------------------- */
+
+
+.third-step {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-info,
+.topics {
+  font-weight: 500;
+  color: #A1A1A9;
+}
+
+.info span,
+.topics-list {
+  font-weight: 500;
+  color: #E5E7EB;
+}
+
+.topics-list {
+  margin-top: 2px;
+}
+
+.topic-item {
+  list-style: disc;
+  margin-top: 3px;
+  margin-left: 25px;
+}
+
+@media (max-width: 1150px) {
+  .register-form {
+    width: 65%;
+  }
+
+  .pagination-steps {
+    left: 13%;
+  }
+
+  body::before {
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+  }
+
+  body::after {
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+@media (max-width: 800px) {
+  .register-form {
+    width: 80%;
+  }
+
+  .pagination-steps {
+    left: -5%;
+  }
+}
+
+@media (max-width: 570px) {
+  .register-form {
+    width: 95%;
+  }
+
+  .pagination-steps {
+    left: -25%;
+  }
+}
