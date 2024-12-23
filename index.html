@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Vite App</title>
+  <script type="module" crossorigin src="/front-register-form/assets/index-J8pf1q-P.js"></script>
+  <link rel="stylesheet" crossorigin href="/front-register-form/assets/index-D7X4GQe6.css">
+</head>
+
+<body>
+  <div id="app">
+    <form id="form" class="register-form">
+      <div id="first-form" class="first-step">
+        <h1 class="title">Register</h1>
+        <label class="label" for="name">
+          Name
+          <p class="input--empty">This field is required!</p>
+          <input class="input" type="text" id="name" autocomplete="off" placeholder="enter your name">
+        </label>
+        <label class="label" for="email">
+          Email
+          <p class="input--empty">This field is required!</p>
+          <input class="input" type="email" id="email" autocomplete="off" placeholder="example@gmail.com">
+        </label>
+      </div>
+      <div id="second-form" class="second-step">
+        <h1 class="title">Which topics you are interested in?</h1>
+        <button type="button" class="topic-btn">Software Development</button>
+        <button type="button" class="topic-btn">User Experience</button>
+        <button type="button" class="topic-btn">Graphic Design</button>
+      </div>
+      <div id="third-form" class="third-step">
+        <h1 class="title">Summary</h1>
+        <div class="user-info">
+          <p class="info user-name">Name: <span>sdsdsd</span></p>
+          <p class="info user-email">Email: <span>sdsdsdsd</span></p>
+        </div>
+        <div class="topics">
+          Topics:
+          <ul class="topics-list">
+            <li class="topic-item">User Experience</li>
+            <li class="topic-item">Graphic Design</li>
+          </ul>
+        </div>
+      </div>
+      <div class="continue-cont">
+        <button class="continue-btn" form="form">Continue</button>
+      </div>
+    </form>
+    <div class="pagination-info">
+      <h4 class="pagination-steps">Step 1 of 3</h4>
+      <ul class="pagination-list">
+        <li class="pagination-item"><button class="pagination-btn pagination-btn--active"></button></li>
+        <li class="pagination-item"><button class="pagination-btn"></button></li>
+        <li class="pagination-item"><button class="pagination-btn"></button></li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
